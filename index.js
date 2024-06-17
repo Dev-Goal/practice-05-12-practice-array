@@ -1,21 +1,21 @@
 let x = 0;
 let array = Array();
 
-var btnAdd = document.getElementById("btnAdd");
+let btnAdd = document.getElementById("btnAdd");
 btnAdd.addEventListener("click", getAdd);
 function getAdd() {
   array[x] = document.getElementById("txtValue").value;
-  alert("Element " + array[x] + " Add " + x);
+  alert("Giá trị " + array[x] + " được thêm vào vị trí " + x);
   x++;
-  document.getElementById("txtValue").value = "";
+  document.getElementById("txtValue").innerHTML = "";
 }
 
-var btnDisplay = document.getElementById("btnDisplay");
+let btnDisplay = document.getElementById("btnDisplay");
 btnDisplay.addEventListener("click", getDisplay);
 function getDisplay() {
   let e = "<hr>";
   for (i = 0; i < array.length; i++) {
-    e += "Element " + i + " = " + array[i] + ";"+ "<br>";
+    e += "Vị trị " + i + " là = " + array[i] + ";" + "<br>";
   }
   document.getElementById("result").innerHTML = e;
 }
